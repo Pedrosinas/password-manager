@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Password Manager</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="screen-select">
+            <h1>Password Manager</h1>
+            <label>
+                <input type="radio" name="service" value="generate">
+                Generate Password
+            </label>
+            <label>
+                <input type="radio" name="service" value="verify">
+                Verify Password
+            </label>
+            
+            <button type="button" id="button-confirm">Confirm</button>
+        </div>
+
+    <div id="screen-generate" class="hidden">
+        <h1>Generate Password</h1>
+
+        <!-- Campo onde a senha gerada vai aparecer -->
+        <div class="field-group">
+            <input type="text" id="generated-password-output" placeholder="Your password will appear here" readonly>
+        </div>
+
+        <!-- Controle de Tamanho (Length) -->
+        <div class="length-container">
+            <label for="password-length">Length:</label>
+            <input type="number" id="password-length" min="4" max="64" value="12">
+        </div>
+
+        <!-- Opções de Caracteres -->
+        <div class="options-container">
+            <label class="checkbox-label">
+                <input type="checkbox" id="include-uppercase" checked>
+                Uppercase (A-Z)
+            </label>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="include-lowercase" checked>
+                Lowercase (a-z)
+            </label>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="include-numbers" checked>
+                Numbers (0-9)
+            </label>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="include-symbols" checked>
+                Symbols (!@#$)
+            </label>
+        </div>
+
+        <!-- Botões de Ação -->
+        <button type="button" id="button-generate">Generate</button>
+        <button type="button" id="button-save-generated">Save Password</button>
+        <button type="button" class="button-secondary" id="button-back-generate">Back</button>
+    </div>
+
+        <div id="screen-verify" class="hidden">
+            <h1>Verify Password</h1>
+        </div>
+    </div>
+</body>
+</html>

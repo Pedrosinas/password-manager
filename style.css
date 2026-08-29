@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 320px;
+}
+
+h1 {
+    margin: 0 0 25px;
+    text-align: center;
+    color: #222;
+    font-size: 26px;
+}
+
+/* Cada opção */
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+label:hover {
+    border-color: #6c63ff;
+    background: #f8f7ff;
+}
+
+/* Radio */
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6c63ff;
+    cursor: pointer;
+}
+
+/* Quando a opção estiver selecionada */
+label:has(input[type="radio"]:checked) {
+    border-color: #6c63ff;
+    background: #f0efff;
+    color: #4b44c4;
+    font-weight: bold;
+}
+
+button[type="button"] {
+    width: 100%;
+    padding: 13px 20px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #6c63ff;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="button"]:hover {
+    background: #574fd6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+button[type="button"]:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Campo de exibição da senha gerada */
+#generated-password-output {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #f8f8fc;
+    font-family: monospace; /* Monospace deixa os caracteres com a mesma largura, ideal para senhas */
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Container para a label e input de quantidade de caracteres */
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.length-container input[type="number"] {
+    width: 65px;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Estilização das checkboxes com o mesmo destaque roxo dos radios */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6c63ff;
+    cursor: pointer;
+}
+
+label:has(input[type="checkbox"]:checked) {
+    border-color: #6c63ff;
+    background: #f0efff;
+    color: #4b44c4;
+    font-weight: bold;
+}
+
+/* Estilo para botões secundários (ex: botão Voltar) */
+button.btn-secondary {
+    background: #e0e0e0;
+    color: #333;
+    margin-top: 8px;
+}
+
+button.btn-secondary:hover {
+    background: #d0d0d0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
